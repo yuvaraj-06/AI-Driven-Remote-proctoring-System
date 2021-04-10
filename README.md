@@ -76,7 +76,8 @@ This can be done by keeping track of certain landmark points on 3D space and the
 
 # Recordings and Transcripts:
 
-<img src="snapshots of website/7d.JPG">
+<img src="snapshots of website/teach-2.JPG">
+<img src="snapshots of website/7d.PNG">
 
 
 
