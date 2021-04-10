@@ -1,0 +1,300 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <base target="_self">
+  <!--stylesheets / link tags loaded here-->
+
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+  <style type="text/css">
+    body,
+    html {
+      height: 100%;
+    }
+    /* workaround modal-open padding issue */
+    
+    body.modal-open {
+      padding-right: 0 !important;
+    }
+    
+    #sidebar {
+      padding-left: 0;
+    }
+    /*
+ * Off Canvas at medium breakpoint
+ * --------------------------------------------------
+ */
+    
+    @media screen and (max-width: 48em) {
+      .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+      }
+      .row-offcanvas-left .sidebar-offcanvas {
+        left: -33%;
+      }
+      .row-offcanvas-left.active {
+        left: 33%;
+        margin-left: -6px;
+      }
+      .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 33%;
+        height: 100%;
+      }
+    }
+    /*
+ * Off Canvas wider at sm breakpoint
+ * --------------------------------------------------
+ */
+    
+    @media screen and (max-width: 34em) {
+      .row-offcanvas-left .sidebar-offcanvas {
+        left: -45%;
+      }
+      .row-offcanvas-left.active {
+        left: 45%;
+        margin-left: -6px;
+      }
+      .sidebar-offcanvas {
+        width: 45%;
+      }
+    }
+    
+    .card {
+      overflow: hidden;
+    }
+    
+    .card-block .rotate {
+      z-index: 8;
+      float: right;
+      height: 100%;
+    }
+    
+    .card-block .rotate i {
+      color: rgba(20, 20, 20, 0.15);
+      position: absolute;
+      left: 0;
+      left: auto;
+      right: -10px;
+      bottom: 0;
+      display: block;
+      -webkit-transform: rotate(-44deg);
+      -moz-transform: rotate(-44deg);
+      -o-transform: rotate(-44deg);
+      -ms-transform: rotate(-44deg);
+      transform: rotate(-44deg);
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-fixed-top navbar-toggleable-sm navbar-inverse bg-primary mb-3">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="flex-row d-flex">
+      <a class="navbar-brand mb-1" href="#">Dashboard</a>
+      <button type="button" class="hidden-md-up navbar-toggler" data-toggle="offcanvas" title="Toggle responsive left sidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+      <ul class="navbar-nav">
+       
+    </div>
+  </nav>
+        <a id="layouts"></a>
+        <hr>
+        <h2 class="sub-header">Class Recordings Available</h2>
+        <br>
+        <br>
+        <div class="row mb-3">
+          <div class="col-lg-6">
+                <div class="row placeholders mb-3">
+          <div class="col-6 col-sm-3 placeholder text-center">
+            <img src="//placehold.it/200/dddddd/fff?text=1" class="center-block img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+            <h4>Python</h4>
+            <span class="text-muted">Prof. Yuvaraj</span>
+          </div>
+          <div class="col-6 col-sm-3 placeholder text-center">
+            <img src="//placehold.it/200/e4e4e4/fff?text=2" class="center-block img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+            <h4>Image Processing</h4>
+            <span class="text-muted">Prof. Jospeh</span>
+          </div>
+          
+        </div>
+
+           
+          </div>
+          <div class="col-lg-6">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home1" role="tab" data-toggle="tab">Summarized Recordings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#profile1" role="tab" data-toggle="tab">Transcripts</a>
+              </li>
+             
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <br>
+              <div role="tabpanel" class="tab-pane active" id="home1">
+               
+                <p>
+                  1. This is the Recordings of lecture on Python by Prof. Yuvaraj
+                  <br>
+                  <br>
+                  <form  method="post" action="vid">
+                    {% csrf_token %}
+                       <button type="submit" name="1" value=1 class="btn btn-primary">Recordings</button>
+
+                </p>
+                <p>
+                    2. This is the Recordings of lecture on Image Processing by Prof. Joseph 
+                    <br>
+                    <br>
+                      <button type="submit" name="2" value=2 class="btn btn-primary">Recordings</button>
+                    </form>
+                </p>
+                
+              </div>
+              
+              <div role="tabpanel" class="tab-pane" id="profile1">
+                <div role="tabpanel" class="tab-pane active" id="home1">
+                    <p>
+                        1. This is the Transcripts of lecture on Python by Prof. Yuvaraj
+                        <br>
+                        <br>
+                        <form  method="post" action="trans">
+                            {% csrf_token %}
+                               <button type="submit" name="1" class="btn btn-primary">Transcripts</button>
+        
+                        </p>
+                        <p>
+                            2. This is the Recordings of lecture on Image Processing by Prof. Joseph 
+                            <br>
+                            <br>
+                              <button type="submit" name="2" class="btn btn-primary">Transcripts</button>
+                            </form>
+                      </p>
+                  </div>
+              </div>  
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-lg-6">
+
+            
+          </div>
+          <!--/col-->
+        </div>
+        <!--/row-->
+
+      </div>
+      <!--/main col-->
+    </div>
+
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Modal</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+        </div>
+        <div class="modal-body">
+          This is a dashboard layout for Bootstrap 4. This is an example of the Modal component which you can use to show content. Any content can be placed inside the modal and it can use the Bootstrap grid classes.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // sandbox disable popups
+    if (window.self !== window.top && window.name != "view1") {
+      window.alert = function() {
+        /*disable alert*/
+      };
+      window.confirm = function() {
+        /*disable confirm*/
+      };
+      window.prompt = function() {
+        /*disable prompt*/
+      };
+      window.open = function() {
+        /*disable open*/
+      };
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
+        var links = document.getElementsByTagName("A");
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].href.indexOf("#") != -1) {
+            links[i].addEventListener("click", function(e) {
+              console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash == "#") {
+                  e.preventDefault();
+                  return false;
+                } else {
+                  /*
+                      var el = document.getElementById(this.hash.replace(/#/, ""));
+                      if (el) {
+                        el.scrollIntoView(true);
+                      }
+                      */
+                }
+              }
+              return false;
+            });
+          }
+        }
+      },
+      false
+    );
+  </script>
+
+  <!--scripts loaded here-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function() {
+      $("[data-toggle=offcanvas]").click(function() {
+        $(".row-offcanvas").toggleClass("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

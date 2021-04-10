@@ -1,0 +1,25 @@
+
+{% block content %}
+
+<h1>hello!!</h1>
+
+<h1>LOGIN</h1>
+<form action="add" method="POST">
+    {% csrf_token %}
+    
+    Enter Username:<input type="text" name="user"><br>
+    Enter Password:<input type="password" name="pass"><br>
+    <input type="submit">
+</form>
+
+<h1>SIGN UP</h1>
+<form action="add" method="POST">
+    {% csrf_token %}
+
+    Enter Username:<input type="text" name="user"><br>
+    Enter Password:<input type="password" name="pass"><br>
+    <input type="submit">
+</form>
+
+
+{% endblock%}
