@@ -1,4 +1,4 @@
-# Hexagon
+
 
 <b>A ready to deploy full-stack AI monitored and enhanced online classroom and examination portal with cloud-database and text to speech features.</b>
 
