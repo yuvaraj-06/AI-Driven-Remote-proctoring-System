@@ -5,8 +5,7 @@
 # Project Demo
 
 
-https://drive.google.com/file/d/1U4SdtCGkSr5MCyZSWBU3Cv9yrOENVB_l/view?usp=sharing
-
+[![Watch the video](https://github.com/yuvaraj-06/AI-Driven-Remote-proctoring-System/blob/main/snapshots%20of%20website/5d.JPG?raw=true)](https://www.youtube.com/watch?v=UPfqkGXaBig)
 
 # Instructions to run application:
 
