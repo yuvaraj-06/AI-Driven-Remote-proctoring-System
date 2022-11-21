@@ -6,9 +6,7 @@ import tensorflow as tf
 
 from tensorflow import keras
 from os.path import dirname, join
-from cassandra.cluster import Cluster
-from cassandra.auth import PlainTextAuthProvider
-
+ 
 
 def draw_faces(img, faces):
     for x, y, x1, y1 in faces:

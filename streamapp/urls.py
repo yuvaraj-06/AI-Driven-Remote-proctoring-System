@@ -11,9 +11,8 @@ urlpatterns = [
     path('video_fee', views.video_fee, name='video_fee'),
     path('startexm', views.startexm, name='startexm'),
     path('record', views.record, name='record'),
-    path('vid', views.vid, name='vid'),
-    path('trans', views.trans, name='trans'),
-    path('submit', views.submit, name='submit'),
+    
+    
 
     ]
 
